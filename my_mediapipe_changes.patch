@@ -1,5 +1,5 @@
 diff --git a/WORKSPACE b/WORKSPACE
-index d4339488..f4d60c74 100644
+index bf5e4236..b7e4bf86 100644
 --- a/WORKSPACE
 +++ b/WORKSPACE
 @@ -271,13 +271,13 @@ new_local_repository(
@@ -7,7 +7,7 @@ index d4339488..f4d60c74 100644
      # If you edit the path here, you will also need to update the corresponding
      # prefix in "opencv_macos.BUILD".
 -    path = "/usr/local",
-+    path = "/opt/homebrew",
+++   path = "/opt/homebrew",
  )
  
  new_local_repository(
