@@ -1,0 +1,9 @@
+Need to copy the .cc files from here to bazel_cpp_library
+
+/usr/local/bin/g++-12 main.cc -L "bazel-bin" -l "hello" -o Main
+
+./Main
+
+/usr/local/bin/g++-12 my_program.cc -L "bazel-bin" -l "my_lib" -o my_program
+
+./my_program

@@ -1,0 +1,32 @@
+bazeld build :main
+
+bazeld build :my_lib
+
+Get the C++ compiler info:
+bazel info --show_make_env -c opt COMPILATION_MODE
+
+/opt compiler path:
+arch -arm64e:
+/opt/homebrew/bin/g++-12
+arch -x86_64:
+/usr/local/bin/
+
+Options:
+g++-12 gcc-12 c++-12
+
+Set C and C++ compiler paths into environment variables:
+export CC=/usr/local/bin/gcc-12
+export CXX=/usr/local/bin/g++-12
+
+export CC=/usr/local/bin/gcc-12 export CXX=/opt/homebrew/bin/g++-12 bazeld build :my_lib
+
+C path:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+
+C++ path:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
+
+
+
+THIS:
+clang++ my_program.cc -arch x86_64 -L "bazel-bin" -lmy_lib -o my_program
