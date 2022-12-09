@@ -1,2 +1,3 @@
 bazel build :lib2
 
+clang++ run_with_lib.cc -arch x86_64 -L "bazel-bin" -l "lib2" -o run_with_lib
